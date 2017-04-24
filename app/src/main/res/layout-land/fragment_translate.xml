@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/primary_language_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:textAllCaps="false"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/swap_languages_button"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Английский"/>
+
+    <ImageButton
+        android:id="@+id/swap_languages_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/swap_button_description"
+        app:layout_constraintBottom_toBottomOf="@+id/primary_language_button"
+        app:layout_constraintLeft_toRightOf="@+id/primary_language_button"
+        app:layout_constraintRight_toLeftOf="@+id/target_language_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert"/>
+
+    <Button
+        android:id="@+id/target_language_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:maxLines="2"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/swap_languages_button"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/swap_languages_button"
+        app:layout_constraintRight_toLeftOf="@+id/translation_text_view"
+        app:layout_constraintTop_toTopOf="@+id/swap_languages_button"
+        tools:text="Русский"/>
+
+    <EditText
+        android:id="@+id/input_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="false"
+        app:layout_constraintBottom_toTopOf="@+id/set_favorite_image_button"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/translation_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/primary_language_button"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Hello"/>
+
+    <TextView
+        android:id="@+id/translation_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="5"
+        android:scrollbars="vertical"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/input_edit_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Привет"/>
+
+    <ImageButton
+        android:id="@+id/clear_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/clear_button_description"
+        app:layout_constraintBottom_toBottomOf="@+id/set_favorite_image_button"
+        app:layout_constraintLeft_toRightOf="@+id/set_favorite_image_button"
+        app:layout_constraintTop_toTopOf="@+id/set_favorite_image_button"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"/>
+
+    <ImageButton
+        android:id="@+id/set_favorite_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/set_favorite_button_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_off"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dictionary_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/yandex_dictionary_requirement_text_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/translation_text_view"
+        app:layout_constraintRight_toRightOf="@+id/translation_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/yandex_translate_requirement_text_view"/>
+
+    <TextView
+        android:id="@+id/yandex_translate_requirement_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/yandex_translate_requirement"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorLink="@android:color/holo_blue_dark"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/translation_text_view"
+        app:layout_constraintRight_toRightOf="@+id/translation_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/translation_text_view"/>
+
+    <TextView
+        android:id="@+id/yandex_dictionary_requirement_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/yandex_dictionary_requirement"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorLink="@android:color/holo_blue_dark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/dictionary_recycler_view"
+        app:layout_constraintRight_toRightOf="@+id/dictionary_recycler_view"/>
+
+</android.support.constraint.ConstraintLayout>

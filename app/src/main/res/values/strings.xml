@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Yandex Translate</string>
+
+    <string name="title_translate">Translate</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_history">History</string>
+    <string name="title_languages">Language selection</string>
+
+    <string name="swap_button_description">Change primary and target language values</string>
+    <string name="clear_button_description">Clear translation properties</string>
+    <string name="set_favorite_button_description">Change note favorite</string>
+    
+    <string name="yandex_translate_requirement">Переведено сервисом <a href="http://translate.yandex.ru/">«Яндекс.Переводчик»</a></string>
+    <string name="yandex_dictionary_requirement">Реализовано с помощью сервиса <a href="https://tech.yandex.ru/dictionary/">«Яндекс.Словарь»</a></string>
+</resources>

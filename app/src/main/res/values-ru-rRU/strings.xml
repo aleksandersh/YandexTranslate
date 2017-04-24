@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Яндекс Переводчик</string>
+
+    <string name="title_translate">Перевод</string>
+    <string name="title_favorites">Избранное</string>
+    <string name="title_history">История</string>
+    <string name="title_languages">Выбор языка</string>
+
+    <string name="swap_button_description">Поменять местами значения исходного языка и конечного</string>
+    <string name="clear_button_description">Очистить содержимое полей перевода</string>
+    <string name="set_favorite_button_description">Добавить или удалить пометку избранного</string>
+</resources>
